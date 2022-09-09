@@ -1,4 +1,10 @@
+#include <stdlib.h>
+
+#include <time.h>
+
 #include <stdio.h>
+
+
 
 /**
 
@@ -8,43 +14,38 @@
 
  */
 
+
+
 int main(void)
 
 {
 
-	int t;
+	int n;
 
-	int m;
+	srand(time(0));
 
-	for (t = 0; t < 9; t++)
+	n = rand() - RAND_MAX / 2;
+
+	if (n > 0)
 
 	{
 
-		for (m = t + 1; m < 10; m++)
+		printf("%i is positive\n", n);
+	}
+	else if (n < 0)
 
-		{
+	{
 
-			putchar((t % 10) + '0');
-
-			putchar((m % 10) + '0');
-
-
-
-			if (t == 8 && m == 9)
-
-				continue;
-
-
-
-			putchar(',');
-
-			putchar(' ');
-
-		}
+		printf("%i is negative\n", n);
 
 	}
+	else
 
-	putchar('\n');
+	{
+
+		printf("%i is zero\n", n);
+
+	}
 
 	return (0);
 
