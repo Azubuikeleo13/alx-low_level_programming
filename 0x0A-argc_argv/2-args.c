@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * @argc: Total number of argument
- * @argv: Arguments received
+ * main - prints all arguments it receives
+ * @argc: n args
+ * @argv: arr args
  * Return: 0
  */
 
@@ -11,10 +11,9 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	for (i = 0, i < argc, i++)
-	{
-		printf("%s\n", argv(i));
-	}
-	printf("\n")
+	for (i = 0; i < argc; i++)
+
+		printf("%s\n", argv[i]);
+
 	return (0);
 }
