@@ -18,11 +18,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		s1_len = 1;
+		s1_len = "";
 	}
 	else if (s2 == NULL)
 	{
-		s2_len = 1;
+		s2_len = "";
 	}
 	else
 	{
