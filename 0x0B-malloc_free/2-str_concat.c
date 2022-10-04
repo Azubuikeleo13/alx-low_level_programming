@@ -13,40 +13,40 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int len1 = 0, len2 = 0, i = 0, j = 0;
-	char *s;
+	int s1_len = 0, s2_len = 0, i = 0, j = 0;
+	char *str;
 
 	if (s1 == NULL)
 	{
-		len1 = 1;
+		s1_len = 1;
 	}
 	else if (s2 == NULL)
 	{
-		len2 = 1;
+		s2_len = 1;
 	}
 	else
 	{
-		while (s1[len1] != '\0')
+		while (s1[s1_len])
 		{
-			len1++;
+			s1_len++;
 		}
-		while (s2[len2] != '\0')
+		while (s2[s2_len])
 		{
-			len2++;
+			s2_len++;
 		}
 	}
-	s = malloc(sizeof(char) * (len1 + len2 + 1));
-	if (s == NULL)
+	str = (char *) malloc((sizeof(char) * s1_len) + (sizeof(char) * s2_len) + 1);
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (; i < len1; i++)
+	for (; i < s1_len; i++)
 	{
-		s[i] = s1[i];
+		str[i] = s1[i];
 	}
-	for (; j < len2; j++)
+	for (; j < s2_len; j++, i++)
 	{
-		s[i + j] = s2[j];
+		str[i] = s2[j];
 	}
-	return (s);
+	return (str);
 }
