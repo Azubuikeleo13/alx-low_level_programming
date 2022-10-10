@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	printf("File name: %s\n", __BASE_FILE__);
+	printf("File name: %s\n", __FILE__);
 
 	return (0);
 }
