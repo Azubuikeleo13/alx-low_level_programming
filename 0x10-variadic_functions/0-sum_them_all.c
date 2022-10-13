@@ -1,5 +1,8 @@
 #include "variadic_function.h"
 
+#include <stdio.h>
+#include <stdarg.h>
+
 /**
  * sum_them_all - Getting the sum of all arguments passed
  * @n: first parameter
