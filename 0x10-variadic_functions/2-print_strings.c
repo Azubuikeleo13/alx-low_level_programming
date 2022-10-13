@@ -15,23 +15,31 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list strn;
+	va_list strings;
+
+	char *str;
 
 	unsigned int index;
 
-	va_start(strn, n);
+	va_start(strings, n);
 
 	for (index = 0; index < n; index++)
 	{
-		if (va_arg(strn, str) == NULL)
-			printf("nil");
+		str = va_arg(strings, char *);
 
-		printf("%s", va_arg(strn, str));
+		if (str == NULL)
+
+			printf("(nil)");
+
+		else
+
+			printf("%s", str);
 
 		if (index != (n - 1) && separator != NULL)
+
 			printf("%s", separator);
 	}
 	printf("\n");
 
-	va_end(strn);
+	va_end(strings);
 }
