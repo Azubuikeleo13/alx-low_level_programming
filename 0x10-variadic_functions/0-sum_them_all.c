@@ -8,7 +8,7 @@
  * @n: first parameter
  * @...: varied number of arguments passed
  *
- * Return: 0 on success
+ * Return: sum on success
  * otherwise, -1 or errno set appropriately
  */
 
@@ -16,7 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
 
-	int i, sum;
+	unsigned int i, sum;
 
 	if (n == 0)
 		return (0);
