@@ -4,9 +4,9 @@
 #include <stdarg.h>
 
 /**
- * print_number - Printing all the giving arguments
+ * print_numbers - Printing all the giving arguments
  *
- * @seperator: String to be printed between numbers
+ * @separator: String to be printed between numbers
  * @n: Number of Arguments passed to the function
  *
  * Return: void
