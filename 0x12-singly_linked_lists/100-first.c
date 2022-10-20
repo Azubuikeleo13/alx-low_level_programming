@@ -1,13 +1,13 @@
 #include "lists.h"
 
+void __attribute__((constructor)) disp(void);
+
 /**
  * disp - Prints a string before the
  *        main function is executed.
  *
  * Return: void
  */
-
-void __attribute__((constructor)) disp(void);
 
 void disp(void)
 {
