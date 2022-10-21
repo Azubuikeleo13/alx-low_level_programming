@@ -1,17 +1,16 @@
+global main
+
 extern printf
 
-global _start
+section .text
 
-section .text:
+main:
 
-_start
-
-	mov	edi, message
+	mov	edi, msg
 	xor	eax, eax
 	call	printf
 	mov	eax, 0
 	ret
 
-section .data:
-	message: db "Hello, Holberton", 0xA, 0x0
-	message_len equ $-message
+section .rodata
+msg: db 'Hello, Holberton', 10, 0
