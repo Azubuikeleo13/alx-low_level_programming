@@ -1,3 +1,5 @@
+extern printf
+
 global _start
 
 section .text:
