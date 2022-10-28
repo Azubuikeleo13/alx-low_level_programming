@@ -3,7 +3,8 @@
 /**
  * get_endianness - Function to determine Endianness of a Machine
  *
- * Return: void
+ * Return: 1 if Little Endian
+ * 0 if Big Endian
  */
 
 int get_endianness(void)
@@ -11,7 +12,7 @@ int get_endianness(void)
 	unsigned int i = 1;
 	char *c = (char*)&i;
 
-	if (*c)
+	if (*c == 1)
 		return (1);
 
 	else
