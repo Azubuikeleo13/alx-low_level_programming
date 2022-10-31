@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * read_textfiile - Function to read text file
+ * read_textfile - Function to read text file
  *
  * @filename: pointer to the name of the file
  * @letters: Number of letters to be write and write to STDOUT
