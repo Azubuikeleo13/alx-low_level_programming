@@ -10,7 +10,7 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	if (head != NULL)
+	if (*head != NULL)
 	{
 		while (head->next != NULL)
 		{
