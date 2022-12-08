@@ -7,22 +7,14 @@
  * Return: Number of nodes
  */
 
-size_t dlistint_len(const dlistint_t *h);
+size_t dlistint_len(const dlistint_t *h)
 {
-	dlistint_t *ptr;
-	size_t count = 0;
+	size_t nodes = 0;
 
-	ptr = malloc(sizeof(dlistint_t));
-
-	if (ptr == NULL)
-		return (NULL);
-
-	ptr = h;
-
-	while (ptr)
+	while (h)
 	{
-		count++;
-		ptr = ptr->next;
+		nodes++;
+		h = h->next;
 	}
-	return (count);
+	return (nodes);
 }
