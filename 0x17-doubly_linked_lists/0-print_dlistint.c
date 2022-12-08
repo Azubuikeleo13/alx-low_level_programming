@@ -9,21 +9,13 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *ptr;
 	size_t count = 0;
 
-	ptr = malloc(sizeof(dlistint_t));
-
-	if (ptr == NULL)
-		return (NULL);
-
-	ptr = h;
-
-	while (ptr != NULL)
+	while (*h)
 	{
-		printf("%s", ptr->n);
+		printf("%s", h->n);
 		count++;
-		ptr = ptr->next;
+		h = h->next;
 	}
 	return (count);
 }
