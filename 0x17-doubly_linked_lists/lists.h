@@ -1,5 +1,5 @@
-#ifndef _LISTS_
-#define _LISTS_
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdlib.h>
 #include <string.h>
@@ -12,7 +12,6 @@
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- *
  */
 
 typedef struct dlistint_s
@@ -32,4 +31,4 @@ int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
-#endif /* _LISTS_ */
+#endif /* LISTS_H */
