@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * dlistint_len - Function to print a list
@@ -19,7 +19,7 @@ size_t dlistint_len(const dlistint_t *h);
 
 	ptr = h;
 
-	while (ptr != NULL)
+	while (ptr)
 	{
 		count++;
 		ptr = ptr->next;
