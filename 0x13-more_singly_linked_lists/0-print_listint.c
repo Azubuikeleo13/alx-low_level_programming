@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * pprint_listint - Function to print a list
+ * print_listint - Function to print a list
  *
  * @h: Pointer to the head of the list
  *
